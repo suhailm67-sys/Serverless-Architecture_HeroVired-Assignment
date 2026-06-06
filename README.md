@@ -25,11 +25,12 @@ Objective: In this assignment, we will gain hands-on experience with AWS Lambda 
       2. Describe instances with `Auto-Stop` and `Auto-Start` tags
       3. Stop the `Auto-Stop` instances and start the `Auto-Start` instances
       4. Print instance IDs that were affected for logging purposes.
-         ```import boto3
+   ```
+   import boto3
 
-ec2 = boto3.client('ec2')
+   ec2 = boto3.client('ec2')
 
-def lambda_handler(event, context):
+   def lambda_handler(event, context):
 
     auto_stop_instances = []
     auto_start_instances = []
@@ -90,6 +91,7 @@ def lambda_handler(event, context):
     }```
 <img width="1388" height="612" alt="image" src="https://github.com/user-attachments/assets/c18ebf01-7d25-4110-aa7e-368d92b062ba" />
 <img width="1778" height="252" alt="image" src="https://github.com/user-attachments/assets/0f219022-2b28-46b8-b080-d3a049eb722f" />
+
 4. Manual Invocation:
    1. After saving your function, manually trigger it and verify in CloudWatch logs. <img width="1545" height="475" alt="image" src="https://github.com/user-attachments/assets/3733ba46-6997-4bb6-9e8d-10c9d0b9ccf0" />
    2. Go to the EC2 dashboard and confirm that the instances' states have changed according to their tags. <img width="1595" height="232" alt="image" src="https://github.com/user-attachments/assets/005f1626-af5d-4f09-8e6b-2c2d848f0c42" />
