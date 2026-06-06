@@ -11,3 +11,79 @@ Objective: In this assignment, we will gain hands-on experience with AWS Lambda 
    2. Tag the first instance with a key `Action` and value `Auto-Stop`
    3. Tag the second instance with a key `Action` and value `Auto-Start`.
 <img width="1581" height="258" alt="image" src="https://github.com/user-attachments/assets/0a7927ce-d232-4a2c-ae61-16dff6b95aea" />
+2. Lambda IAM Role
+   1. In the IAM dashboard, create a new role for Lambda
+   2. Attach the `AmazonEC2FullAccess` policy to this role <img width="1552" height="681" alt="image" src="https://github.com/user-attachments/assets/46d7767a-c095-4c25-b07b-95bb0113dd94" />
+3. Lambda Function Creation
+   1. Navigate to the Lambda dashboard and create a new function
+   2. Choose Python 3.x as the runtime
+   3. Assign the IAM role created in the previous step <img width="1875" height="522" alt="image" src="https://github.com/user-attachments/assets/063b1c1f-902a-447b-9997-e2678573544a" />
+   4. Write the Boto3 Python script to:
+      1. Initialize a boto3 EC2 client
+      2. Describe instances with `Auto-Stop` and `Auto-Start` tags
+      3. Stop the `Auto-Stop` instances and start the `Auto-Start` instances
+      4. Print instance IDs that were affected for logging purposes.
+         ```import boto3
+
+ec2 = boto3.client('ec2')
+
+def lambda_handler(event, context):
+
+    auto_stop_instances = []
+    auto_start_instances = []
+
+    # Find instances tagged Auto-Stop
+    stop_response = ec2.describe_instances(
+        Filters=[
+            {
+                'Name': 'tag:Action',
+                'Values': ['Auto-Stop']
+            }
+        ]
+    )
+
+    # Extract instance IDs
+    for reservation in stop_response['Reservations']:
+        for instance in reservation['Instances']:
+            auto_stop_instances.append(instance['InstanceId'])
+
+    # Find instances tagged Auto-Start
+    start_response = ec2.describe_instances(
+        Filters=[
+            {
+                'Name': 'tag:Action',
+                'Values': ['Auto-Start']
+            }
+        ]
+    )
+
+    # Extract instance IDs
+    for reservation in start_response['Reservations']:
+        for instance in reservation['Instances']:
+            auto_start_instances.append(instance['InstanceId'])
+
+    # Stop instances
+    if auto_stop_instances:
+        ec2.stop_instances(
+            InstanceIds=auto_stop_instances
+        )
+
+        print(
+            f"Stopped Instances: {auto_stop_instances}"
+        )
+
+    # Start instances
+    if auto_start_instances:
+        ec2.start_instances(
+            InstanceIds=auto_start_instances
+        )
+
+        print(
+            f"Started Instances: {auto_start_instances}"
+        )
+
+    return {
+        'statusCode': 200,
+        'body': 'EC2 automation completed'
+    }```
+    
