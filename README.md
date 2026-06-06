@@ -8,12 +8,14 @@ Objective: In this assignment, we will gain hands-on experience with AWS Lambda 
 #### Step 1: Create two EC2 instances
 1. Navigate to the EC2 dashboard and create two new t2.micro instances (or any other available free-tier type)
    1. Create EC2 instance and give a tag name to instance - Actions → Instance Settings → Manage Tags
-   2. Tag the first instance with a key `Action` and value `Auto-Stop`
-   3. Tag the second instance with a key `Action` and value `Auto-Start`.
+   2. Tag the first instance with a key `Action` and value `Auto-Stop` <img width="1592" height="700" alt="image" src="https://github.com/user-attachments/assets/86e99743-9323-44e7-9fc9-c8e593669026" />
+   3. Tag the second instance with a key `Action` and value `Auto-Start`. <img width="1581" height="687" alt="image" src="https://github.com/user-attachments/assets/50ce2b81-41db-452b-81b8-def94e750ba1" />
 <img width="1581" height="258" alt="image" src="https://github.com/user-attachments/assets/0a7927ce-d232-4a2c-ae61-16dff6b95aea" />
+
 2. Lambda IAM Role
    1. In the IAM dashboard, create a new role for Lambda
    2. Attach the `AmazonEC2FullAccess` policy to this role <img width="1552" height="681" alt="image" src="https://github.com/user-attachments/assets/46d7767a-c095-4c25-b07b-95bb0113dd94" />
+
 3. Lambda Function Creation
    1. Navigate to the Lambda dashboard and create a new function
    2. Choose Python 3.x as the runtime
@@ -88,3 +90,6 @@ def lambda_handler(event, context):
     }```
 <img width="1388" height="612" alt="image" src="https://github.com/user-attachments/assets/c18ebf01-7d25-4110-aa7e-368d92b062ba" />
 <img width="1778" height="252" alt="image" src="https://github.com/user-attachments/assets/0f219022-2b28-46b8-b080-d3a049eb722f" />
+4. Manual Invocation:
+   1. After saving your function, manually trigger it and verify in CloudWatch logs. <img width="1545" height="475" alt="image" src="https://github.com/user-attachments/assets/3733ba46-6997-4bb6-9e8d-10c9d0b9ccf0" />
+   2. Go to the EC2 dashboard and confirm that the instances' states have changed according to their tags. <img width="1595" height="232" alt="image" src="https://github.com/user-attachments/assets/005f1626-af5d-4f09-8e6b-2c2d848f0c42" />
