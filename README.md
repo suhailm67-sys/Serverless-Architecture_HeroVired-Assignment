@@ -18,7 +18,7 @@ Objective: In this assignment, we will gain hands-on experience with AWS Lambda 
 
 3. Lambda Function Creation
    1. Navigate to the Lambda dashboard and create a new function
-   2. Choose Python 3.x as the runtime
+   2. Choose Python 3.14 as the runtime
    3. Assign the IAM role created in the previous step <img width="1875" height="522" alt="image" src="https://github.com/user-attachments/assets/063b1c1f-902a-447b-9997-e2678573544a" />
    4. Write the Boto3 Python script to:
       1. Initialize a boto3 EC2 client
