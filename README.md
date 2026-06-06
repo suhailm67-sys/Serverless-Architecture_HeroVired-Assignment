@@ -86,4 +86,5 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': 'EC2 automation completed'
     }```
-    
+<img width="1388" height="612" alt="image" src="https://github.com/user-attachments/assets/c18ebf01-7d25-4110-aa7e-368d92b062ba" />
+<img width="1778" height="252" alt="image" src="https://github.com/user-attachments/assets/0f219022-2b28-46b8-b080-d3a049eb722f" />
