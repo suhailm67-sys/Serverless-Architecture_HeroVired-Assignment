@@ -100,7 +100,7 @@ def lambda_handler(event, context):
 1. Attach an event source, like Amazon CloudWatch Events, to trigger the Lambda function at your desired backup frequency (e.g., every week). <img width="1990" height="1358" alt="image" src="https://github.com/user-attachments/assets/a3d9a5b6-da71-4f6c-9514-698707880cda" />
 <img width="1986" height="1176" alt="image" src="https://github.com/user-attachments/assets/34159fe4-cc95-4ce2-a0f5-43b686f62e79" />
 <img width="1966" height="1564" alt="image" src="https://github.com/user-attachments/assets/cec7a389-8076-487e-bca1-349ac3a91e2a" />
-2. CloudWatch Logs Verification.
+2. CloudWatch Logs Verification
      1. Created snapshot logs. <img width="2012" height="702" alt="image" src="https://github.com/user-attachments/assets/2227012a-c4b6-4278-bab9-d08f41235471" />
      2. Deleted snapshot logs. <img width="1996" height="798" alt="image" src="https://github.com/user-attachments/assets/167913d4-b727-461d-9666-e4ea6115eba9" />
 
