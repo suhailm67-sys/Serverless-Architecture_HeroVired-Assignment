@@ -75,3 +75,8 @@ def lambda_handler(event, context):
 Amazon S3 now applies server-side encryption with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3. Starting January 5, 2023, all new object uploads to Amazon S3 are automatically encrypted at no additional cost and with no impact on performance. The automatic encryption status for S3 bucket default encryption configuration and for new object uploads is available in CloudTrail logs, S3 Inventory, S3 Storage Lens, the Amazon S3 console, and as an additional Amazon S3 API response header in the AWS CLI and AWS SDKs. For more information, see Default encryption FAQ. https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-encryption-faq.html
 
 Therefore, it is not possible to show for unencrypted bucket as by default the encryption is enabled and there is no option to disable it even when we change the setting manually. Please verify this and hopfully marks will not be deducted because of this. 
+
+2. Review the Lambda logs to identify the buckets without server-side encryption. <img width="1942" height="1138" alt="image" src="https://github.com/user-attachments/assets/e81c06a1-604f-4a1a-88b1-0c0059d49bab" />
+
+### Architecture Overview:  
+<img width="536" height="734" alt="image" src="https://github.com/user-attachments/assets/aa1f3a42-7441-4166-a85f-f9569009a258" />
