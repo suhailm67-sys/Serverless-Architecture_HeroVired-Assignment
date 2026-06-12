@@ -15,7 +15,7 @@ Objective: In this assignment, we will gain experience with AWS Lambda and Boto3
 
 #### Step 3: Lambda Function
 1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 and assigning the custom role created earlier. <img width="1992" height="850" alt="image" src="https://github.com/user-attachments/assets/66c15a68-da10-4b97-8615-9fadb82867d9" />
-2. Initialize a boto3 S3 client 
+2. Initialize a boto3 S3 client, list objects in the specified bucket, delete objects older than 30 days and print the names of deleted objects for logging purposes.
 ```
 import boto3
 from datetime import datetime, timezone, timedelta
@@ -63,4 +63,10 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'deleted_files': deleted_files
-    }```
+    }
+```
+
+#### Step 4: Manual Invocation
+1. After saving the function, manually trigger it <img width="2820" height="1540" alt="image" src="https://github.com/user-attachments/assets/b14d8e26-9098-488d-ad07-2ee0a88dc4e7" />
+
+
