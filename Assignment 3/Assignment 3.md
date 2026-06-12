@@ -7,7 +7,7 @@ Objective: In this assignment, we will enhance AWS security posture by setting u
 ### Task: Automate the detection of S3 buckets that don't have server-side encryption enabled.
 #### Step 1: S3 Setup
 1. Navigate to the S3 dashboard and create a few buckets. Ensure that a couple of them don't have server-side encryption enabled.
-<img width="1970" height="660" alt="image" src="https://github.com/user-attachments/assets/e89f6815-673b-4801-a93d-3cab1664f841" />
+<img width="1494" height="742" alt="image" src="https://github.com/user-attachments/assets/6484637f-acf5-4369-880f-5daf6d4cfc04" />
 <img width="1490" height="740" alt="image" src="https://github.com/user-attachments/assets/14a96906-045d-4a99-8745-f71779001683" />
 <img width="1984" height="694" alt="image" src="https://github.com/user-attachments/assets/38fb0c36-bbe2-4364-86ac-733c5a294d45" />
 
