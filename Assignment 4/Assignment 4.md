@@ -88,9 +88,19 @@ def lambda_handler(event, context):
         'deleted_snapshots': deleted_snapshot_ids
     }
 ```
-<img width="1956" height="1422" alt="image" src="https://github.com/user-attachments/assets/8a132ac9-217b-4af5-9bfd-db03704246a0" />
+#### Step 4: Manual Invocation
+1. After saving your function, either manually trigger it or wait for the scheduled event.
+<img width="1956" height="1422" alt="image" src="https://github.com/user-attachments/assets/8a132ac9-217b-4af5-9bfd-db03704246a0" /> <img width="1966" height="1552" alt="image" src="https://github.com/user-attachments/assets/b8f4b4b0-02a2-4523-b7fd-9c7a7cc2daed" />
+2. Go to the EC2 dashboard and confirm that the snapshot is created and old snapshots are deleted.
+     1. Created snapshot. <img width="2004" height="1316" alt="image" src="https://github.com/user-attachments/assets/f5f1af95-7213-4201-9b15-22183f4c16dc" />
+     2. Deleted snapshot. <img width="2022" height="508" alt="image" src="https://github.com/user-attachments/assets/1ba84a12-254b-4b1d-af02-498b59d232a5" />
 
-#### Step 4: Event Source (Bonus)
+
+#### Step 5: Event Source (Bonus)
 1. Attach an event source, like Amazon CloudWatch Events, to trigger the Lambda function at your desired backup frequency (e.g., every week). <img width="1990" height="1358" alt="image" src="https://github.com/user-attachments/assets/a3d9a5b6-da71-4f6c-9514-698707880cda" />
 <img width="1986" height="1176" alt="image" src="https://github.com/user-attachments/assets/34159fe4-cc95-4ce2-a0f5-43b686f62e79" />
 <img width="1966" height="1564" alt="image" src="https://github.com/user-attachments/assets/cec7a389-8076-487e-bca1-349ac3a91e2a" />
+2. CloudWatch Logs Verification.
+     1. Created snapshot logs. <img width="2012" height="702" alt="image" src="https://github.com/user-attachments/assets/2227012a-c4b6-4278-bab9-d08f41235471" />
+     2. Deleted snapshot logs. <img width="1996" height="798" alt="image" src="https://github.com/user-attachments/assets/167913d4-b727-461d-9666-e4ea6115eba9" />
+
