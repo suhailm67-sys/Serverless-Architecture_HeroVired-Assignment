@@ -104,3 +104,5 @@ def lambda_handler(event, context):
      1. Created snapshot logs. <img width="2012" height="702" alt="image" src="https://github.com/user-attachments/assets/2227012a-c4b6-4278-bab9-d08f41235471" />
      2. Deleted snapshot logs. <img width="1996" height="798" alt="image" src="https://github.com/user-attachments/assets/167913d4-b727-461d-9666-e4ea6115eba9" />
 
+### Architecture Overview:  
+<img width="630" height="988" alt="image" src="https://github.com/user-attachments/assets/dc70d41f-4af5-43dd-8481-0a638dddd367" />
