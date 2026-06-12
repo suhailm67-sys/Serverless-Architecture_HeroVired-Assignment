@@ -8,7 +8,7 @@ Objective: In this assignment, we will enhance AWS security posture by setting u
 #### Step 1: S3 Setup
 1. Navigate to the S3 dashboard and create a few buckets. Ensure that a couple of them don't have server-side encryption enabled.
 <img width="1970" height="660" alt="image" src="https://github.com/user-attachments/assets/e89f6815-673b-4801-a93d-3cab1664f841" />
-<img width="1966" height="592" alt="image" src="https://github.com/user-attachments/assets/157a4e4f-62be-4f46-8192-ab415b159924" />
+<img width="1490" height="740" alt="image" src="https://github.com/user-attachments/assets/14a96906-045d-4a99-8745-f71779001683" />
 <img width="1984" height="694" alt="image" src="https://github.com/user-attachments/assets/38fb0c36-bbe2-4364-86ac-733c5a294d45" />
 
 #### Step 2: Lambda IAM Role
