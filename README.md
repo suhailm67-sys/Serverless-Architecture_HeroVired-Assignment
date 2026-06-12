@@ -97,4 +97,5 @@ Objective: In this assignment, we will gain hands-on experience with AWS Lambda 
    2. Go to the EC2 dashboard and confirm that the instances' states have changed according to their tags. <img width="1595" height="232" alt="image" src="https://github.com/user-attachments/assets/005f1626-af5d-4f09-8e6b-2c2d848f0c42" />
 
 #### Architecture Overview
-<img width="998" height="1468" alt="image" src="https://github.com/user-attachments/assets/7f820347-f98f-4961-83e8-033e8a64e484" />
+<img width="482" height="782" alt="image" src="https://github.com/user-attachments/assets/abdd8d1c-5608-443d-93b8-c3aa9336b7d6" />
+
