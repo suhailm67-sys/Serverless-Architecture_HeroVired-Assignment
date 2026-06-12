@@ -1,0 +1,63 @@
+import boto3
+
+ec2 = boto3.client('ec2')
+
+def lambda_handler(event, context):
+
+    auto_stop_instances = []
+    auto_start_instances = []
+
+    # Find instances tagged Auto-Stop
+    stop_response = ec2.describe_instances(
+        Filters=[
+            {
+                'Name': 'tag:Action',
+                'Values': ['Auto-Stop']
+            }
+        ]
+    )
+
+    # Extract instance IDs
+    for reservation in stop_response['Reservations']:
+        for instance in reservation['Instances']:
+            auto_stop_instances.append(instance['InstanceId'])
+
+    # Find instances tagged Auto-Start
+    start_response = ec2.describe_instances(
+        Filters=[
+            {
+                'Name': 'tag:Action',
+                'Values': ['Auto-Start']
+            }
+        ]
+    )
+
+    # Extract instance IDs
+    for reservation in start_response['Reservations']:
+        for instance in reservation['Instances']:
+            auto_start_instances.append(instance['InstanceId'])
+
+    # Stop instances
+    if auto_stop_instances:
+        ec2.stop_instances(
+            InstanceIds=auto_stop_instances
+        )
+
+        print(
+            f"Stopped Instances: {auto_stop_instances}"
+        )
+
+    # Start instances
+    if auto_start_instances:
+        ec2.start_instances(
+            InstanceIds=auto_start_instances
+        )
+
+        print(
+            f"Started Instances: {auto_start_instances}"
+        )
+
+    return {
+        'statusCode': 200,
+        'body': 'EC2 automation completed'
+    }
