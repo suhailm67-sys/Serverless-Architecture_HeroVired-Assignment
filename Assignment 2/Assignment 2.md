@@ -9,12 +9,11 @@ Objective: In this assignment, we will gain experience with AWS Lambda and Boto3
 1. Navigate to the S3 dashboard and create a new bucket. <img width="1994" height="1128" alt="image" src="https://github.com/user-attachments/assets/e17f7c66-2867-4c4c-b684-94e7db9eac64" />
 2. Upload multiple files to this bucket, ensuring that some files are older than 30 days (you may need to adjust your system's date temporarily for this or use old files). <img width="1970" height="1462" alt="image" src="https://github.com/user-attachments/assets/081bdd2e-11fb-4bc4-8b19-c0e8f8f2e583" /> <img width="1988" height="1456" alt="image" src="https://github.com/user-attachments/assets/6fda539e-adbc-4386-ae85-e200ed4c3a91" />
 
-
 #### Step 2: Lambda IAM Role
 1. In the IAM dashboard, create a new role for Lambda by attaching the following roles `AmazonS3FullAccess` and `AWSLambdaBasicExecutionRole`. <img width="1948" height="1316" alt="image" src="https://github.com/user-attachments/assets/4e27c1c7-4d77-406d-9833-273a1b254d4f" />
 
 #### Step 3: Lambda Function
-1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 and assigning the custom role created earlier. <img width="1992" height="850" alt="image" src="https://github.com/user-attachments/assets/66c15a68-da10-4b97-8615-9fadb82867d9" />
+1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 as the runtime and assign the custom role created previous step. <img width="1992" height="850" alt="image" src="https://github.com/user-attachments/assets/66c15a68-da10-4b97-8615-9fadb82867d9" />
 2. Initialize a boto3 S3 client, list objects in the specified bucket, delete objects older than 30 days and print the names of deleted objects for logging purposes.
 ```
 import boto3
