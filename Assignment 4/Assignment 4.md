@@ -1,7 +1,7 @@
 # Serverless-Architecture_HeroVired-Assignment
 HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 
-## Assignment 3: Automatic EBS Snapshot and Cleanup Using AWS Lambda and Boto3
+## Assignment 4: Automatic EBS Snapshot and Cleanup Using AWS Lambda and Boto3
 Objective: In this assignment, we will automate the backup process for your EBS volumes and ensure that backups older than a specified retention period are cleaned up to save costs.
 
 ### Task: Automate the creation of snapshots for specified EBS volumes and clean up snapshots older than 30 days.
