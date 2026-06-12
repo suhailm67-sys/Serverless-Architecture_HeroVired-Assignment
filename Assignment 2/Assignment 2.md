@@ -13,3 +13,54 @@ Objective: In this assignment, we will gain experience with AWS Lambda and Boto3
 #### Step 2: Lambda IAM Role
 1. In the IAM dashboard, create a new role for Lambda by attaching the following roles `AmazonS3FullAccess` and `AWSLambdaBasicExecutionRole` <img width="1948" height="1316" alt="image" src="https://github.com/user-attachments/assets/4e27c1c7-4d77-406d-9833-273a1b254d4f" />
 
+#### Step 3: Lambda Function
+1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 and assigning the custom role created earlier. <img width="1992" height="850" alt="image" src="https://github.com/user-attachments/assets/66c15a68-da10-4b97-8615-9fadb82867d9" />
+2. Initialize a boto3 S3 client 
+```
+import boto3
+from datetime import datetime, timezone, timedelta
+
+s3 = boto3.client('s3')
+
+BUCKET_NAME = 's3-cleanup-demo-yourname'
+
+def lambda_handler(event, context):
+
+    days_old = 30
+
+    cutoff_date = datetime.now(timezone.utc) - timedelta(days=days_old)
+
+    response = s3.list_objects_v2(
+        Bucket=BUCKET_NAME
+    )
+
+    deleted_files = []
+
+    if 'Contents' in response:
+
+        for obj in response['Contents']:
+
+            object_key = obj['Key']
+            last_modified = obj['LastModified']
+
+            if last_modified < cutoff_date:
+
+                s3.delete_object(
+                    Bucket=BUCKET_NAME,
+                    Key=object_key
+                )
+
+                deleted_files.append(object_key)
+
+                print(
+                    f"Deleted: {object_key}"
+                )
+
+    print(
+        f"Total Deleted Files: {len(deleted_files)}"
+    )
+
+    return {
+        'statusCode': 200,
+        'deleted_files': deleted_files
+    }```
