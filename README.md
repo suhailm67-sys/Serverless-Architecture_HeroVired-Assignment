@@ -11,3 +11,7 @@ Objective: In this assignment, we will gain experience with AWS Lambda and Boto3
 
 Please find the details Assignment 2 readme file and the python lambda function code in the Assignment 2 folder `Assignment 2 >> Assignment 2.md >> lambda_function`
 
+## Assignment 3: Monitor Unencrypted S3 Buckets Using AWS Lambda and Boto3
+Objective: In this assignment, we will enhance AWS security posture by setting up a Lambda function that detects any S3 bucket without server-side encryption.
+
+Please find the details Assignment 3 readme file and the python lambda function code in the Assignment 3 folder `Assignment 3 >> Assignment 3.md >> lambda_function`
