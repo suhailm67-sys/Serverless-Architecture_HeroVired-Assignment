@@ -1,5 +1,5 @@
 # Serverless-Architecture_HeroVired-Assignment
 HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 
-## Assignment 1: Automated Instance Management Using AWS Lambda and Boto3
-Objective: In this assignment, we will gain hands-on experience with AWS Lambda and Boto3, Amazon's SDK for Python. We will create a Lambda function that will automatically manage EC2 instances based on their tags.
+## Assignment 2: Automated S3 Bucket Cleanup Using AWS Lambda and Boto3
+Objective: In this assignment, we will gain experience with AWS Lambda and Boto3 by creating a Lambda function that will automatically clean up old files in an S3 bucket.
