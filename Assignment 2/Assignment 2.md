@@ -11,4 +11,5 @@ Objective: In this assignment, we will gain experience with AWS Lambda and Boto3
 
 
 #### Step 2: Lambda IAM Role
-1. In the IAM dashboard, create a new role for Lambda.
+1. In the IAM dashboard, create a new role for Lambda by attaching the following roles `AmazonS3FullAccess` and `AWSLambdaBasicExecutionRole` <img width="1948" height="1316" alt="image" src="https://github.com/user-attachments/assets/4e27c1c7-4d77-406d-9833-273a1b254d4f" />
+
