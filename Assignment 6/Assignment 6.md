@@ -5,7 +5,6 @@ HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 Objective: In this assignment, we will create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
 
 ### Task: Set up a Lambda function to check your AWS billing amount daily, and if it exceeds a specified threshold, send an alert via SNS.
-
 #### Step 1: Prerequisite: Enable Billing Metrics
 1. AWS billing metrics are not enabled by default.
 2. Enable Billing Alerts
