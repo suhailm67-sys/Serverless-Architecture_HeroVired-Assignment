@@ -120,7 +120,7 @@ def lambda_handler(event, context):
 
 ### Note: Since the billing alerts are managed by HeroVired, unable to change the alert to be send to personal email. Have also checked with Mohan Krishna from HeroVired and they are also checking on it. Since it might take time, uploading this assignment as additional one and hope marks wont be deducted for this. <img width="1970" height="1488" alt="image" src="https://github.com/user-attachments/assets/b66417f4-3c71-4574-8815-cc9da00a6e39" />
 
-#### Step 5: Manually trigger the funcation
+#### Step 5: Manually trigger the function
 1. Since the billing alerts are managed by HeroVired, unable to trigger the funtion automatically as the policy permission missing for user. Hence triggering it manually by making temporary change to the code.
 ```
 if not datapoints:
