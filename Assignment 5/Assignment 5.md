@@ -58,7 +58,7 @@ def lambda_handler(event, context):
 #### Step 4: CloudWatch Events
 1. Set up a CloudWatch Event Rule to trigger the EC2 instance launch event.
      1. Open: `Amazon EventBridge`
-     2. Create Rule user rule name: `EC2AutoTagRule
+     2. Create Rule user rule name: `EC2AutoTagRule`
      3. Event bus: `Default`
      4. Rule Type: `Rule with Event Pattern`
      5. Event Source: `AWS Events`
