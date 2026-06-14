@@ -20,3 +20,8 @@ Please find the details Assignment 3 readme file and the python lambda function 
 Objective: In this assignment, we will automate the backup process for your EBS volumes and ensure that backups older than a specified retention period are cleaned up to save costs.
 
 Please find the details Assignment 4 readme file and the python lambda function code in the Assignment 4 folder `Assignment 4 >> Assignment 4.md >> lambda_function`
+
+## Assignment 5: Auto-Tagging EC2 Instances on Launch Using AWS Lambda and Boto3
+Objective: Learn to automate the tagging of EC2 instances as soon as they are launched, ensuring better resource tracking and management.
+
+Please find the details Assignment 4 readme file and the python lambda function code in the Assignment 4 folder `Assignment 5 >> Assignment 5.md >> lambda_function`
