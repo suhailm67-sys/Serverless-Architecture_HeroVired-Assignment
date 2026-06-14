@@ -13,7 +13,7 @@ Objective: In this assignment, we will automate the backup process for your EBS 
 1. In the IAM dashboard, create a new role for Lambda and attach policies that allow Lambda to create EBS snapshots and delete them (`AmazonEC2FullAccess` `AWSLambdaBasicExecutionRole` for simplicity, but be more restrictive in real-world scenarios). <img width="1950" height="1230" alt="image" src="https://github.com/user-attachments/assets/2ea9bbc7-10f5-4842-9af6-e3c969e31303" />
 
 #### Step 3: Lambda Function
-1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 as the runtime and assign the custom role created previous step. <img width="1992" height="752" alt="image" src="https://github.com/user-attachments/assets/84983ac4-b6b2-48cf-b952-ab272efbe79d" />
+1. Navigate to the Lambda dashboard, create a new function by choosing Python 3.14 as the runtime and assign the custom role created in the previous step. <img width="1992" height="752" alt="image" src="https://github.com/user-attachments/assets/84983ac4-b6b2-48cf-b952-ab272efbe79d" />
 2. Write the Boto3 Python script to:
      1. Initialize a boto3 EC2 client.
      2. Create a snapshot for the specified EBS volume.
