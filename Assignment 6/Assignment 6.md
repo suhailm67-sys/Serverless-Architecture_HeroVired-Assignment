@@ -140,9 +140,12 @@ if not datapoints:
 <img width="1570" height="1140" alt="image" src="https://github.com/user-attachments/assets/c7d3b877-1211-49aa-a59d-9e11b11f33f3" />
 
 
-#### Step 5: Automate Daily Using EventBridge
+#### Step 6: Automate Daily Using EventBridge
 1. Attach an event source, like Amazon CloudWatch Events, to trigger the Lambda function daily.
   1. Open `Amazon EventBridge` and create a new rule under the name `DailyBillingCheck` for triggering `AWSBillingMonitor` <img width="1994" height="1218" alt="image" src="https://github.com/user-attachments/assets/21108532-4233-4ff8-92a9-78357b8cc793" /> <img width="2004" height="1004" alt="image" src="https://github.com/user-attachments/assets/85da93c2-8c90-4350-ae88-3fc9c7336948" />
 2. Verify EventBridge Trigger
   1. Open `Lambda → AWSBillingMonitor` and navigate to `Configuration → Triggers` to see `EventBridge, DailyBillingCheck` <img width="1952" height="1574" alt="image" src="https://github.com/user-attachments/assets/ac96a524-9ff5-4199-a695-cc11c65d10c8" />
+3. Verify CloudWatch Logs <img width="2018" height="784" alt="image" src="https://github.com/user-attachments/assets/6ea0544c-d351-43a6-9e8c-a66625c36fb3" />
 
+### Architecture Overview:
+<img width="594" height="972" alt="image" src="https://github.com/user-attachments/assets/225133a9-f046-4555-877b-4178b5ba7eb2" />
