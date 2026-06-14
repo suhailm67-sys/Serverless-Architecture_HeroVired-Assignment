@@ -55,7 +55,17 @@ def lambda_handler(event, context):
         'instance_id': instance_id
     }
 ```
-#### Step 4: CloudWatch Events:
+#### Step 4: CloudWatch Events
 1. Set up a CloudWatch Event Rule to trigger the EC2 instance launch event. <img width="1456" height="1402" alt="image" src="https://github.com/user-attachments/assets/1e4dc649-450f-4591-a902-d825ef1f8d23" />
 2.  Attach the Lambda function as the target. <img width="1458" height="1450" alt="image" src="https://github.com/user-attachments/assets/1e9520bc-cea9-4a03-a27d-1f21055881ce" />
 <img width="1954" height="1234" alt="image" src="https://github.com/user-attachments/assets/314b2e91-0f93-48d1-9d7d-88a000f491f4" />
+
+#### Step 4: Testing
+1. Launch a new EC2 instance. <img width="1988" height="346" alt="image" src="https://github.com/user-attachments/assets/254ac91f-b5a0-474a-9119-4d301730fc4d" />
+2. After a short delay, confirm that the instance is automatically tagged as specified.<img width="1998" height="994" alt="image" src="https://github.com/user-attachments/assets/3c95ab73-8759-4ad0-becf-dff0d059be87" />
+<img width="1974" height="1580" alt="image" src="https://github.com/user-attachments/assets/2355262a-a25a-41d7-88ae-368a7a4181b9" />
+
+#### Step 5: Verify CloudWatch Logs
+1. Open `Lambda → Monitor`
+2. Click `View CloudWatch Logs`
+3. Check the logs for tagged instance. <img width="2006" height="782" alt="image" src="https://github.com/user-attachments/assets/bdd0fae9-87b6-4cd9-a607-2a3d7e896d37" />
