@@ -6,7 +6,7 @@ Objective: In this assignment, we will automate the tagging of EC2 instances as 
 
 ### Task: Automatically tag any newly launched EC2 instance with the current date and a custom tag.
 #### Step 1: EC2 Setup
-1. Ensure you have the capability to launch EC2 instances.
+1. Ensure you have the capability to launch EC2 instances. <img width="1988" height="346" alt="image" src="https://github.com/user-attachments/assets/254ac91f-b5a0-474a-9119-4d301730fc4d" />
 
 #### Step 2: Lambda IAM Role
 1. In the IAM dashboard, create a new role for Lambda and attach the `AmazonEC2FullAccess` `AWSLambdaBasicExecutionRole` policy to this role. <img width="1958" height="1224" alt="image" src="https://github.com/user-attachments/assets/26c610a0-3985-4e42-ba72-07ab07c4402f" />
