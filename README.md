@@ -30,3 +30,8 @@ Please find the details Assignment 5 readme file and the python lambda function 
 Objective: Create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
 
 Please find the details Assignment 6 readme file and the python lambda function code in the Assignment 6 folder `Assignment 6 >> Assignment 6.md >> lambda_function`
+
+## Assignment 7: Archive Old Files from S3 to Glacier Using AWS Lambda and Boto3
+Objective: Automate the archival of files older than a certain age from an S3 bucket to Amazon Glacier for cost-effective storage.
+
+Please find the details Assignment 7 readme file and the python lambda function code in the Assignment 7 folder `Assignment 7 >> Assignment 7.md >> lambda_function`
