@@ -5,10 +5,10 @@ HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 Objective: In this assignment, we will automate the tagging of EC2 instances as soon as they are launched, ensuring better resource tracking and management.
 
 ### Task: Automatically tag any newly launched EC2 instance with the current date and a custom tag.
-#### Step 1: EC2 Setup
+#### Step 1: Verify EC2 Launch Capability
 1. Ensure you have the capability to launch EC2 instances. <img width="1988" height="346" alt="image" src="https://github.com/user-attachments/assets/254ac91f-b5a0-474a-9119-4d301730fc4d" />
 
-#### Step 2: Lambda IAM Role
+#### Step 2: Create IAM Role for Lambda
 1. In the IAM dashboard, create a new role for Lambda and attach the `AmazonEC2FullAccess` `AWSLambdaBasicExecutionRole` policy to this role. <img width="1958" height="1224" alt="image" src="https://github.com/user-attachments/assets/26c610a0-3985-4e42-ba72-07ab07c4402f" />
 
 #### Step 3: Create Lambda Function
@@ -56,8 +56,16 @@ def lambda_handler(event, context):
     }
 ```
 #### Step 4: CloudWatch Events
-1. Set up a CloudWatch Event Rule to trigger the EC2 instance launch event. <img width="1456" height="1402" alt="image" src="https://github.com/user-attachments/assets/1e4dc649-450f-4591-a902-d825ef1f8d23" />
-2.  Attach the Lambda function as the target. <img width="1458" height="1450" alt="image" src="https://github.com/user-attachments/assets/1e9520bc-cea9-4a03-a27d-1f21055881ce" />
+1. Set up a CloudWatch Event Rule to trigger the EC2 instance launch event.
+     1. Open: `Amazon EventBridge`
+     2. Create Rule user rule name: `EC2AutoTagRule
+     3. Event bus: `Default`
+     4. Rule Type: `Rule with Event Pattern`
+     5. Event Source: `AWS Events`
+     6. Service Name: `EC2`
+     7. Event type: `EC2 Instance State-change Notification` and state `running`
+<img width="1456" height="1402" alt="image" src="https://github.com/user-attachments/assets/1e4dc649-450f-4591-a902-d825ef1f8d23" />
+3.  Attach the Lambda function as the target. <img width="1458" height="1450" alt="image" src="https://github.com/user-attachments/assets/1e9520bc-cea9-4a03-a27d-1f21055881ce" />
 <img width="1954" height="1234" alt="image" src="https://github.com/user-attachments/assets/314b2e91-0f93-48d1-9d7d-88a000f491f4" />
 
 #### Step 4: Testing
