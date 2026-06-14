@@ -90,4 +90,14 @@ def lambda_handler(event, context):
 ```
 #### Step 4: Test the code manually
 1. Manually trigger the Lambda function or set it to run periodically. <img width="1948" height="1590" alt="image" src="https://github.com/user-attachments/assets/05babc87-9fb4-4aea-ad53-a501e48d9b78" />
-2. Confirm that older files in the S3 bucket are moved to the Glacier storage class.
+2. Confirm that older files in the S3 bucket are moved to the Glacier storage class. <img width="1874" height="1472" alt="image" src="https://github.com/user-attachments/assets/1d876c97-10cd-44bb-9bde-63b6aba49c48" />
+<img width="1976" height="368" alt="image" src="https://github.com/user-attachments/assets/6ddd7250-7fce-4248-9763-537ad4857974" />
+<img width="1972" height="390" alt="image" src="https://github.com/user-attachments/assets/2965a58a-254b-4a7f-94ef-a3d5691d9ebf" />
+
+#### Step 5: Verify CloudWatch Logs
+1. Open `Lambda → Monitor`
+2. Click `View CloudWatch Logs`
+3. Check the logs: <img width="2012" height="1176" alt="image" src="https://github.com/user-attachments/assets/1da78bf6-5daf-431e-abfb-e9aae2d690da" />
+
+#### Architecture Overview: 
+<img width="466" height="772" alt="image" src="https://github.com/user-attachments/assets/648904ae-d40b-4c80-abb4-bfbae24f36f7" />
