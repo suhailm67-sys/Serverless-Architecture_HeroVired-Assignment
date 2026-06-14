@@ -24,4 +24,9 @@ Please find the details Assignment 4 readme file and the python lambda function 
 ## Assignment 5: Auto-Tagging EC2 Instances on Launch Using AWS Lambda and Boto3
 Objective: Learn to automate the tagging of EC2 instances as soon as they are launched, ensuring better resource tracking and management.
 
-Please find the details Assignment 4 readme file and the python lambda function code in the Assignment 4 folder `Assignment 5 >> Assignment 5.md >> lambda_function`
+Please find the details Assignment 5 readme file and the python lambda function code in the Assignment 5 folder `Assignment 5 >> Assignment 5.md >> lambda_function`
+
+## Assignment 6: Monitor and Alert High AWS Billing Using AWS Lambda, Boto3, and SNS
+Objective: Create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
+
+Please find the details Assignment 6 readme file and the python lambda function code in the Assignment 6 folder `Assignment 6 >> Assignment 6.md >> lambda_function`
