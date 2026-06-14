@@ -5,13 +5,6 @@ HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 Objective: In this assignment, we will create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
 
 ### Task: Set up a Lambda function to check your AWS billing amount daily, and if it exceeds a specified threshold, send an alert via SNS.
-#### Step 1: Prerequisite: Enable Billing Metrics
-1. AWS billing metrics are not enabled by default.
-2. Enable Billing Alerts
-  1. Open: `AWS Console → Billing and Cost Management`
-  2. Navigate to: `Billing Preferences`
-  3. Enable: `Receive Billing Alerts`
-  4. Click: `Save Preferences`
 
 #### Step 1: SNS Setup
 1. Navigate to the SNS dashboard and create a new topic.
@@ -121,3 +114,35 @@ def lambda_handler(event, context):
         'current_charge': current_charge
     }
 ```
+<img width="1962" height="1234" alt="image" src="https://github.com/user-attachments/assets/bf1e016a-50d2-4ecf-9a89-86ff8154b5df" />
+<img width="1600" height="343" alt="image" src="https://github.com/user-attachments/assets/8f57cb3c-43c5-4ac7-b241-624d2043429c" />
+<img width="1600" height="378" alt="image" src="https://github.com/user-attachments/assets/a70bd8ac-b0b4-423d-b71e-34116595bff4" />
+
+### Note: Since the billing alerts are managed by HeroVired, unable to change the alert to be send to personal email. Have also checked with Mohan Krishna from HeroVired and they are also checking on it. Since it might take time, uploading this assignment as additional one and hope marks wont be deducted for this. <img width="1970" height="1488" alt="image" src="https://github.com/user-attachments/assets/b66417f4-3c71-4574-8815-cc9da00a6e39" />
+
+#### Step 5: Manually trigger the funcation
+1. Since the billing alerts are managed by HeroVired, unable to trigger the funtion automatically as the policy permission missing for user. Hence triggering it manually by making temporary change to the code.
+```
+if not datapoints:
+    print("No billing data found")
+
+    sns.publish(
+        TopicArn=TOPIC_ARN,
+        Subject='Lambda Test',
+        Message='SNS and Lambda are working.'
+    )
+
+    return {
+        'statusCode': 200
+    }
+```
+<img width="1946" height="1278" alt="image" src="https://github.com/user-attachments/assets/e965de35-cebd-4ef6-b678-70338546ad3a" />
+<img width="1570" height="1140" alt="image" src="https://github.com/user-attachments/assets/c7d3b877-1211-49aa-a59d-9e11b11f33f3" />
+
+
+#### Step 5: Automate Daily Using EventBridge
+1. Attach an event source, like Amazon CloudWatch Events, to trigger the Lambda function daily.
+  1. Open `Amazon EventBridge` and create a new rule under the name `DailyBillingCheck` for triggering `AWSBillingMonitor` <img width="1994" height="1218" alt="image" src="https://github.com/user-attachments/assets/21108532-4233-4ff8-92a9-78357b8cc793" /> <img width="2004" height="1004" alt="image" src="https://github.com/user-attachments/assets/85da93c2-8c90-4350-ae88-3fc9c7336948" />
+2. Verify EventBridge Trigger
+  1. Open `Lambda → AWSBillingMonitor` and navigate to `Configuration → Triggers` to see `EventBridge, DailyBillingCheck` <img width="1952" height="1574" alt="image" src="https://github.com/user-attachments/assets/ac96a524-9ff5-4199-a695-cc11c65d10c8" />
+
