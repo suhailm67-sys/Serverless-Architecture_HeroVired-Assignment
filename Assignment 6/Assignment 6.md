@@ -1,8 +1,8 @@
 # Serverless-Architecture_HeroVired-Assignment
 HeroVired Assignment on Serverless Architecture using AWS Lambda and Boto 3
 
-## Assignment 4: Automatic EBS Snapshot and Cleanup Using AWS Lambda and Boto3
-Objective: In this assignment, we will Create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
+## Assignment 6: Monitor and Alert High AWS Billing Using AWS Lambda, Boto3, and SNS
+Objective: In this assignment, we will create an automated alerting mechanism for when your AWS billing exceeds a certain threshold.
 
 ### Task: Set up a Lambda function to check your AWS billing amount daily, and if it exceeds a specified threshold, send an alert via SNS.
 
