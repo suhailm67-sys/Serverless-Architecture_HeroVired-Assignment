@@ -68,4 +68,17 @@ def lambda_handler(event, context):
 #### Step 5: Verify CloudWatch Logs
 1. Open `Lambda → Monitor`
 2. Click `View CloudWatch Logs`
-3. Check the logs for tagged instance. <img width="2006" height="782" alt="image" src="https://github.com/user-attachments/assets/bdd0fae9-87b6-4cd9-a607-2a3d7e896d37" />
+3. Check the logs for tagged instance `i-093ebfa1bd4d101f1`. <img width="2006" height="782" alt="image" src="https://github.com/user-attachments/assets/bdd0fae9-87b6-4cd9-a607-2a3d7e896d37" />
+4. We can also test it manually changing JSON in the Lambda function.
+```
+{
+  "detail": {
+    "instance-id": "i-093ebfa1bd4d101f1",
+    "state": "running"
+  }
+}
+```
+<img width="1958" height="1204" alt="image" src="https://github.com/user-attachments/assets/d3c36fc8-802e-44ac-a33c-cfea9ec093b6" />
+
+#### Architecture Overview: 
+<img width="708" height="1082" alt="image" src="https://github.com/user-attachments/assets/47b01c78-2536-4a1a-a9c1-8dbf8fb2d75c" />
